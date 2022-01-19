@@ -1,0 +1,129 @@
+@media (max-height: 620px) and (max-width: 500px) {
+    .control-panel {
+       display: flex;
+    }
+
+    .circle:nth-child(8),
+    .circle:nth-child(9),
+    .circle:nth-child(3)::before,
+    .circle:nth-child(7)::before {
+    display: none;
+    }
+
+    .circle:nth-child(3)::before,
+    .circle:nth-child(6)::before,
+    .circle:nth-child(9)::before {
+        display: block;
+    }
+
+    .empty { display: none; }
+
+    .btn {
+        font-size: 20px;
+        padding: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .run {
+        width: 100px;
+    }
+
+    .input {
+        font-size: 20px;
+        height: 30px;
+    }
+}
+
+@media (max-height: 391px) and (max-width: 845px) {
+    .control-panel {
+        display: flex;
+    }
+ 
+     .circle:nth-child(8),
+     .circle:nth-child(9),
+     .circle:nth-child(3)::before,
+     .circle:nth-child(7)::before {
+     display: none;
+    }
+ 
+     .circle:nth-child(3)::before,
+     .circle:nth-child(6)::before,
+     .circle:nth-child(9)::before {
+         display: block;
+    }
+ 
+     .empty { display: none; }
+}
+
+
+/* iPad Mini in landscape only */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+    .circle:nth-child(3)::before,
+     .circle:nth-child(6)::before {
+         display: block;
+    }
+    
+}
+
+/* iPad Mini in portrait only */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+    .circle:nth-child(3)::before {
+         display: block;
+    }   
+}
+
+/* Ipad Pro Landscape*/
+@media only screen and (device-width: 1180px) and (device-height: 820px) and (orientation : landscape) { 
+    .control-panel {
+        display: flex;
+    }
+ 
+    .circle:nth-child(3)::before,
+    .circle:nth-child(6)::before {
+        display: block;
+    }
+ 
+     .empty { display: none; }
+}
+
+/* Ipad Pro Portrait*/
+@media only screen and (device-width: 820px) and (device-height: 1180px) and (orientation : portrait) { 
+    .control-panel {
+        display: flex;
+    }
+ 
+     .circle:nth-child(8),
+     .circle:nth-child(9),
+     .circle:nth-child(3)::before,
+     .circle:nth-child(7)::before {
+     display: none;
+    }
+ 
+     .circle:nth-child(3)::before,
+     .circle:nth-child(6)::before,
+     .circle:nth-child(9)::before {
+         display: block;
+    }
+ 
+     .empty { display: none; }
+}
+
+@media  screen and (min-width: 1400px) {
+    .control-panel {
+        display: flex;
+    }
+ 
+    .circle:nth-child(3)::before,
+    .circle:nth-child(6)::before {
+         display: block;
+    }
+ 
+     .empty { display: none; }
+}

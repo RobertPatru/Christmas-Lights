@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Lights</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/media.css">
+</head>
+<body>
+    <div class="lights-container">
+        <div class="circle red animation-speed"></div>
+        <div class="circle yellow animation-speed animation-delay"></div>
+        <div class="circle light-blue animation-speed"></div>
+        <div class="circle light-green animation-speed animation-delay"></div>
+        <div class="circle red animation-speed"></div>
+        <div class="circle yellow animation-speed animation-delay"></div>
+        <div class="circle light-blue animation-speed"></div>
+        <div class="circle light-green animation-speed animation-delay"></div>
+        <div class="circle red animation-speed"></div>
+    </div>
+
+    <h1>Merry Christmas</h1>
+
+    <div class="control-panel">
+        <button class="btn on">On</button>
+        <button class="btn off">Off</button>
+        <div class="btn empty"></div>
+        <label for="speed" class="speed-label">Speed</label>
+        <input type="number" class="input" value="1" min="1" max="5">
+        <button class="btn run">RUN</button>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+:root {
+    --transition-properties: 1s animation linear;
+    --animation-duration: 0.2s;
+    --animation-delay: 1s;
+}
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Dongle', sans-serif;
+    background: rgb(25, 21, 26);
+    color: #ffffff;
+    font-size: 30px;
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+
+.lights-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 70px;
+    height: 70px;
+    background-color: rgb(86, 50, 96);
+    border-radius: 50%;
+    margin: 20px;
+
+    position: relative;
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+
+    top: -100px;
+    left: 25px;
+    
+    width: 120px;
+    height: 100px;
+
+    border-radius: 50%;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px rgb(46, 36, 49) solid;
+}
+
+.circle::after {
+    content: '';
+    position: absolute;
+
+    top: -22px;
+    left: calc(35px - 15px);
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 20px 20px 5px 5px;
+    background: rgba(46, 36, 49, 1);
+
+
+}
+
+.circle:nth-child(3)::before,
+.circle:nth-child(6)::before,
+.circle:nth-child(9)::before {
+    display: none;
+}
+
+.btn {
+    background: rgb(25, 21, 26);
+    color: white; 
+    font-size: 30px;
+    border-radius: 50%;
+    border: 2px solid rgb(184, 134, 222);
+    padding: 10px;
+    width: 75px;
+    height: 75px;
+}
+
+.on {
+    grid-area: on;
+}
+
+.off {
+    grid-area: off;
+}
+
+.empty {
+    border: none;
+    grid-area: empty;
+}
+
+.speed-label {
+    font-size: 50px;
+    grid-area: speed-label;
+}
+
+.input {
+    height: 50px;
+    font-size: 30px;
+    padding: 0 10px;
+    grid-area: input; 
+}
+
+.run {
+    border-radius: 0 20px 20px 0;
+    height: 60px;
+    width: 100px;
+    grid-area: run;
+}
+
+.on:hover,
+.off:hover,
+.run:hover {
+    cursor: pointer;
+    background: rgb(184, 134, 222);
+}
+
+.control-panel {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 20px;
+    grid-template:
+        "on empty off"
+        "speed-label input run"
+    ;
+}
+
+.red {
+    background-color: #c0392b;
+    transition: var(--transition-properties);
+    animation: glow-red var(--animation-duration) infinite;
+    animation-direction: alternate-reverse;  
+}
+
+.yellow {
+    background-color: #f1c40f;
+    transition: var(--transition-properties);
+    animation: glow-yellow var(--animation-duration) infinite;
+    animation-direction: alternate-reverse;
+    animation-delay: var(--animation-delay);
+}
+
+.light-blue {
+    background-color: #74f7e1;
+    transition: var(--transition-properties);
+    animation: glow-light-blue var(--animation-duration) infinite;
+    animation-direction: alternate-reverse;  
+}
+
+.light-green {
+    background-color: #2ecc71;
+    transition: var(--transition-properties);
+    animation: glow-light-green var(--animation-duration) infinite;
+    animation-direction: alternate-reverse;  
+    animation-delay: var(--animation-delay);
+}
+
+@keyframes glow-red {
+    to {
+        box-shadow: 0 0 20px 5px #c0392b;
+    }
+}
+
+@keyframes glow-yellow {
+    to {
+        box-shadow: 0 0 20px 5px #f1c40f;
+    }
+}
+
+@keyframes glow-light-blue {
+    to {
+        box-shadow: 0 0 20px 5px #74f7e1;
+    }
+}
+@keyframes glow-light-green {
+    to {
+        box-shadow: 0 0 20px 5px #2ecc71;
+    }
+}
+
+.lightsOff {
+    animation: none;
+    background: rgb(86, 50, 96);
+}
+
+.animation-speed {
+    animation-duration: 2s;
+}
+
+.animation-delay {
+    animation-delay: 1s;
+}
