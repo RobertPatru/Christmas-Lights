@@ -38,7 +38,7 @@ class ChristmasLights {
     }
 
     static animationSpeed() {
-        const speed = input.value * 0.2;
+        const speed = 1.5 / input.value;
 
         animationSpeed.forEach( (light) => {
             light.style.animationDuration = `${speed}s`;
